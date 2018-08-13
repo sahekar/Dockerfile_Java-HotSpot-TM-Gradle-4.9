@@ -6,7 +6,7 @@ RUN gradle check
 RUN gradle test
 RUN gradle build
 RUN mkdir /tmp/camel
-RUN cp build/libs/camel-sql-kafka-pipeline-*.jar /tmp/camel
+RUN cp build/libs/<<yourjarname>>-*.jar /tmp/camel
 RUN rm -rf /home/gradle/mproject
 WORKDIR /tmp/camel
-ENTRYPOINT java -jar camel-sql-kafka-pipeline-*.jar
+ENTRYPOINT java -jar <<yourjarname>>-*.jar

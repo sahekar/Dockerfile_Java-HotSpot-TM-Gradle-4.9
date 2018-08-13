@@ -7,6 +7,6 @@ RUN gradle check \
     && gradle build \
     && mkdir /tmp/camel \
     && cp build/libs/<<yourjarname>>-*.jar /tmp/camel \
-    && rm -rf /home/gradle/mproject
+    && rm -rf /home/gradle/myproject
 WORKDIR /tmp/camel
 ENTRYPOINT java -jar <<yourjarname>>-*.jar
